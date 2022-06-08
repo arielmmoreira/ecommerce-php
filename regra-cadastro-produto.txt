@@ -1,0 +1,8 @@
+1 - cadastrar categoria
+INSERT INTO `categoria`(`IDCATEGORIA`, `DESCRICAO`) VALUES ('[value-1]','[value-2]')
+
+2 - cadastrar marca
+INSERT INTO `marca`(`IDMARCA`, `DESCRICAO`) VALUES ('[value-1]','[value-2]')
+
+3 - cadastrar produto
+INSERT INTO `produtos`(`IDPROD`, `IDCATEGORIA`, `IDMARCA`, `NOME`, `DESCRICAO`, `ESTOQUE`, `PRECO`)
