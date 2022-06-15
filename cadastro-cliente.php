@@ -16,7 +16,7 @@
     </header>
     <section>
         <div class="center">
-          <form method="POST" action="controller/cadastrar-cliente.php">
+          <form method="GET" action="controller/ajax-cadastrar-cliente.php">
               Nome:                 <input type="text" name="nome">
               Login:                <input type="text" name="login">
               Senha:                <input type="password" name="senha">
