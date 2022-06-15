@@ -16,10 +16,21 @@
     </header>
     <section id="produtos">
         <div class="center">
-          <form method="POST" action="controller/cadastrar-produto.php">
-
-              <button type="submit">Enviar</button>
-            </form>
+            <?php
+                require_once("controller/conexao.php");
+                $query = $mysqli->query("SELECT DESCRICAO FROM categoria");
+                $lista_categorias = mysqli_fetch_row($query);
+                var_dump($lista_categorias);
+                
+                
+                echo '<select name="sexo">';
+                foreach($lista_categorias as $item)
+                {
+                  echo '<option>' . $item . '</option>';
+                }
+                echo '</select>'
+                
+            ?>
         </div>
     </section>
   </body>
