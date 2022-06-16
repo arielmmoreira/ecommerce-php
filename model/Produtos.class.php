@@ -5,19 +5,19 @@
 
       $produtos = $mysqli->query("SELECT p.*, c.DESCRICAO as CATEGORIA, m.DESCRICAO as MARCA FROM produtos p INNER JOIN categoria c ON c.IDCATEGORIA = p.IDCATEGORIA INNER JOIN marca m ON m.IDMARCA = p.IDMARCA ORDER BY IDPROD DESC");
 
-      echo '<ul>';
       while ($prod = mysqli_fetch_object($produtos)){
-        echo '<li>
-                <h2>'.$prod->NOME.'</h2><p>'.$prod->DESCRICAO.'</p>
-                <p><b>Categoria: </b>'.$prod->CATEGORIA.'</p>
-                <p><b>Marca: </b>'.$prod->MARCA.'</p>
-                <p><b>Estoque: </b>'.$prod->ESTOQUE.'</p>
-                <p><b>Preço: </b>R$'.str_replace('.',',',$prod->PRECO).'</p>
-                <p><b>Status: </b>'.($status = $prod->ESTOQUE > 0 ? "Disponível":"Indisponível").'</p>
-                <a id="adicionar" href="controller/carrinho-add.php?id='.$prod->IDPROD.'">Adicionar ao carrinho</a>
-              </li>';
+        echo '<div class="col-12 col-md-6 col-lg-4">
+                <div class="produto-item">
+                  <h2>'.$prod->NOME.'</h2><p>'.$prod->DESCRICAO.'</p>
+                  <p><b>Categoria: </b>'.$prod->CATEGORIA.'</p>
+                  <p><b>Marca: </b>'.$prod->MARCA.'</p>
+                  <p><b>Estoque: </b>'.$prod->ESTOQUE.'</p>
+                  <p><b>Preço: </b>R$'.str_replace('.',',',$prod->PRECO).'</p>
+                  <p><b>Status: </b>'.($status = $prod->ESTOQUE > 0 ? "Disponível":"Indisponível").'</p>
+                  <a id="adicionar" href="controller/carrinho-add.php?id='.$prod->IDPROD.'">Adicionar ao carrinho</a>
+                </div>
+              </div>';
       }
-      echo '</ul>';
     }
 
     function pedido(){
