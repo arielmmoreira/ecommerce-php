@@ -22,7 +22,9 @@
 
     function pedido(){
       require_once('../controller/conexao.php');
-      session_start();
+      if(!isset($_SESSION)) {
+        session_start();
+      }
 
       $pedido = $mysqli->query("INSERT INTO pedido(IDCLI, IDFOR, STATUS) VALUES (1,1,'E')");
       if ($pedido){
@@ -47,7 +49,9 @@
     }
 
     function resumo(){
-      session_start();
+      if(!isset($_SESSION)) {
+        session_start();
+      }
       require_once('controller/conexao.php');
 
       if ($id = @$_GET['pedido']){
@@ -77,7 +81,9 @@
     function inserirProduto(){
 
       require_once('../controller/conexao.php');
-      session_start();
+      if(!isset($_SESSION)) {
+        session_start();
+      }
 
       $produto = $mysqli->query("INSERT INTO PRODUTOS (IDCATEGORIA,IDMARCA,IDPROD,DESCRICAO,ESTOQUE,NOME,PRECO) VALUES(1,1,3,'Computador Portátil',10,'Ultrabook',4000)");
 
@@ -92,10 +98,6 @@
       {
         echo "Erro! Adicionar o produto";
       }
-
-
     }    
-
-
   }
 ?>

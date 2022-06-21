@@ -27,6 +27,10 @@ header .container {
     justify-content: space-between;
 }
 
+header a {
+    text-decoration: none;
+}
+
 header h1 {
     font-size: 28px;
     color: #fff;
@@ -52,6 +56,22 @@ header nav a {
     border-radius: 3px;
     background: #ffffff;
     transition: background 0.2s;
+    position: relative;
+}
+
+header nav a .counter {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 header nav a:hover {

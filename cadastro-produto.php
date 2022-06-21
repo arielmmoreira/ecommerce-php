@@ -6,14 +6,10 @@
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <?php include_once('include/head.php'); ?>
   </head>
   <body>
-    <header>
-      <div class="center">
-        <h1>Programação Web II - Cadastro</h1>
-        <a href="index.php">Inicial</a>
-      </div>
-    </header>
+    <?php include_once('include/topo.php'); ?>
     <section id="produtos">
         <div class="center">
             <?php

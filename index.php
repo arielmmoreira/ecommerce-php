@@ -11,16 +11,7 @@
 </head>
 
 <body>
-	<header>
-		<div class="container">
-			<h1>E-commerce</h1>
-			<nav>
-				<a href="carrinho.php">Carrinho</a>
-				<a href="cadastro-cliente.php">Cadastrar Cliente</a>
-				<a href="cadastro-produto.php">Cadastrar Produto</a>
-			</nav>
-		</div>
-	</header>
+	<?php include_once('include/topo.php'); ?>
 	<section id="produtos">
 		<div class="container">
 			<h2 class="title">Produtos</h2>
