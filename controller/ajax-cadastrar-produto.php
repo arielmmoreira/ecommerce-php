@@ -17,6 +17,9 @@
     if (empty($item))
     {
       $verifica = 1;
+      $resposta = array(
+        "status" => "erro no preenchimento do campo"
+    );
       break;
     }
   }
@@ -55,7 +58,7 @@
   else
   {
     $resposta = array(
-        "status" => "erro"
+        "status" => "erro na conexão com o banco"
     );
   }
 
