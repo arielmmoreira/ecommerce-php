@@ -2,7 +2,7 @@
   $user = 'root';
   $pass = '';
   $server = 'localhost';
-  $db = 'ecommerce_base';
+  $db = 'ecommerce';
 
   $mysqli = mysqli_connect($server, $user, $pass, $db);
   $mysqli->set_charset('utf8');

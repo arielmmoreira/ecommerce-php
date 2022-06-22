@@ -1,7 +1,5 @@
 <?php
-  require_once("../controller/conexao.php");
-
-  
+  require_once("../controller/conexao.php");  
 
   $nome = $_GET["nome"];
   $login = $_GET["login"];
@@ -13,7 +11,6 @@
   $rg = $_GET["rg"];
   $telefone = $_GET["telefone"];
   $celular = $_GET["celular"];
-
 
   $lista = array($nome, $login, $senha, $data, $endereco, $sexo, $cpf, $rg, $telefone, $celular);
 
@@ -37,11 +34,9 @@
     }
   }
 
-  
-
   if ($verifica == 0)
   {
-    $status = $mysqli->query("INSERT INTO cliente(NOME, `LOGIN`, SENHA, DTNASC, ENDERECO, SEXO, CPF, RG, TELEFONE, CELULAR) 
+    $mysqli->query("INSERT INTO cliente(NOME, `LOGIN`, SENHA, DTNASC, ENDERECO, SEXO, CPF, RG, TELEFONE, CELULAR) 
     VALUES ('$nome', '$login','$senha','$data','$endereco', '$sexo_indb','$cpf','$rg','$telefone','$celular')");
 
     $resposta = array(
@@ -56,7 +51,5 @@
   }
 
   echo json_encode($resposta);
- 
-  
-  
+   
 ?>
