@@ -8,11 +8,6 @@
     --primary-color: #f1641f;
 }
 
-.center {
-    width: 1000px;
-    margin: 0 auto;
-}
-
 header {
     width: 100%;
     height: 80px;
@@ -79,7 +74,7 @@ header nav a:hover {
     color: var(--primary-color); 
 }
 
-section#produtos .row .produto-item {
+section .row .produto-item {
     padding: 20px;
     background: #ffffff;
     border: 1px solid #c2c2c2;
@@ -88,19 +83,19 @@ section#produtos .row .produto-item {
     flex-direction: column;
 }
 
-section#produtos h2.title {
+section h2.title {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 25px;
 }
 
-section#produtos .row h2 {
+section .row h2 {
     font-size: 22px;
     margin-bottom: 15px;
     color: #2a2a2a;
 }
 
-section#produtos .row p {
+section .row p {
     float: left;
     color: #7e7e7e;
     clear: left;
@@ -108,7 +103,7 @@ section#produtos .row p {
     margin-bottom: 5px;
 }
 
-section#produtos .row a {
+section .row a {
     text-decoration: none;
     margin-top: 20px;
     height: 45px;
@@ -123,13 +118,13 @@ section#produtos .row a {
     transition: .2s;
 }
 
-section#produtos .row a:hover {
+section .row a:hover {
     border-color: var(--primary-color);
     background-color: #fff;
     color: var(--primary-color);
 }
 
-section#produtos a {
+section a {
     text-decoration: none;
     margin-top: 20px;
     height: 40px;
@@ -139,4 +134,76 @@ section#produtos a {
     color: #ffffff;
     background: #5a2b2b;
     float: left;
+}
+
+.cadastro form {
+    padding-bottom: 50px;
+}
+
+.cadastro label {
+    font-size: 15px;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 7px;
+    color: #2a2a2a;
+}
+
+.cadastro input, .cadastro select {
+    position: relative;
+    appearance: none;
+    border-radius: 4px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    color: #2a2a2a;
+    padding: 1px 20px 0;
+    margin-bottom: 20px;
+}
+
+.cadastro .select-wrapper {
+    position: relative;
+}
+
+.cadastro .select-wrapper::after {
+    content: '';
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA8ElEQVRoge3YOw7CMBBF0bcJLNj/VuiSihQsBwoyTQTE9vxs6V0pEg0zOgRFYIAxxhhjbMoKgDuAZX8duXe12nsB8ADw2q8ngJt2aPTe47AojOneX8O8MaZ7z4Z5YUz31g6zxpjvXRuGybVB91Qp+4zWvYs1RIPpRZxCWm+x5mum3XX1XlCDcUdEYMIQnphwhAcmDWGJSUdImsfkpnyv+S9uzaeafieyMK6IKEwIwhsTipCsMSkIyQqTipC0mCEQUi9mKITU8y9vOITU8r97WIRUcxIyPEL6dzY1DUL6dlo4HUIq+BwSRJ8bM8YYY2zq3kHIKCH7FRG+AAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.cadastro button[type="submit"] {
+    border: 1px solid transparent;
+    outline: none;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 1px 30px 0;
+    margin-top: 20px;
+    width: 100%;
+    transition: .2s;
+}
+
+.cadastro button[type="submit"]:hover {
+    border-color: var(--primary-color);
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #707070;
 }

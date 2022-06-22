@@ -20,6 +20,7 @@
 			</div>
 		</div>
 	</section>
+	<?php include_once('include/rodape.php'); ?>
 </body>
 
 </html>

@@ -11,26 +11,77 @@
   <body>
     <?php include_once('include/topo.php'); ?>
     <section>
-        <div class="center">
+        <div class="container cadastro">
+          <h2 class="title">Novo cliente</h2>
           <form method="GET" action="controller/ajax-cadastrar-cliente.php">
-              Nome:                 <input type="text" name="nome">
-              Login:                <input type="text" name="login">
-              Senha:                <input type="password" name="senha">
-              Data de Nascimento:   <input type="date" name="data">
-              Endereço:             <input type="text" name="endereco">
-              Sexo:                 <select name="sexo">
-                                      <option value="masculino">Masculino</option>
-                                      <option value="feminino">Feminino</option>
-                                    </select>
-              CPF:                  <input type="text" name="cpf">
-              RG:                   <input type="text" name="rg">
-              Telefone:             <input type="text" name="telefone">
-              Celular:              <input type="text" name="celular">
-              
-                      <button type="submit">Enviar</button>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Nome</label>
+                  <input type="text" placeholder="Nome" name="nome">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Login</label>
+                  <input type="text" placeholder="Login" name="login">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Senha</label>
+                  <input type="password" placeholder="Senha" name="senha">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Data de nascimento</label>
+                  <input type="date" placeholder="Data de nascimento" name="data">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Endereço</label>
+                  <input type="text" placeholder="Endereço" name="endereco">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Sexo</label>
+                  <div class="select-wrapper">
+                    <select name="sexo">
+                      <option value="masculino">Masculino</option>
+                      <option value="feminino">Feminino</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>CPF</label>
+                  <input type="text" placeholder="CPF" name="cpf">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>RG</label>
+                  <input type="text" placeholder="RG" name="rg">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Telefone</label>
+                  <input type="text" placeholder="Telefone" name="telefone">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Celular</label>
+                  <input type="text" placeholder="Celular" name="celular">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Teste</label>
+                  <input type="text" placeholder="Teste" name="teste">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Teste</label>
+                  <input type="text" placeholder="Teste" name="teste">
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <label>Teste</label>
+                  <input type="text" placeholder="Teste" name="teste">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <button type="submit">Enviar</button>
+                </div>
+              </div>
             </form>
         </div>
     </section>
+    <?php include_once('include/rodape.php'); ?>
   </body>
 </html>
 

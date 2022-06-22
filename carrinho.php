@@ -16,6 +16,6 @@
           <?php require_once('controller/carrinho-busca.php'); ?>
         </div>
     </section>
-
+    <?php include_once('include/rodape.php'); ?>
   </body>
 </html>
