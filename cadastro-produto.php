@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Categoria</label>
-                  <input type="text" name="categoria" list="categorias">
+                  <input type="text" placeholder="Selecione ou escreva para criar" name="categoria" list="categorias">
                   <datalist id="categorias">
                     <?php
                       require_once("controller/conexao.php");
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Marca</label>
-                  <input type="text" name="marca" list="marcas">
+                  <input type="text" placeholder="Selecione ou escreva para criar" name="marca" list="marcas">
                   <datalist id="marcas">
                     <?php
                       require_once("controller/conexao.php");
