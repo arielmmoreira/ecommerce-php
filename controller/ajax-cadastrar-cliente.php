@@ -31,7 +31,8 @@
     {
       $verifica = 1;
       $resposta = array(
-        "status" => "erro no preenchimento do campo"
+        "status" => "error",
+        "msg"    => "Algum campo não foi preenchido corretamente.",
     );
       break;
     }
@@ -43,16 +44,17 @@
     VALUES ('$nome', '$login','$senha','$data','$endereco', '$sexo_indb','$cpf','$rg','$telefone','$celular')");
 
     $resposta = array(
-        "status" => "sucesso"
+        "status" => "success",
+        "msg" => "",
     );
   }
   else
   {
     $resposta = array(
-        "status" => "erro na conexão com o banco"
+        "status" => "error",
+        "msg"    => "Encontramos um problema ao se conectar ao banco de dados."
     );
   }
 
   echo json_encode($resposta);
-   
 ?>

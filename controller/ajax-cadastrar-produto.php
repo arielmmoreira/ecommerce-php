@@ -10,16 +10,15 @@
 
   $lista = array($nome, $descricao, $estoque, $preco, $categoria, $marca);
 
-  
-
   $verifica = 0;
   foreach ($lista as $item) {
     if (empty($item))
     {
       $verifica = 1;
       $resposta = array(
-        "status" => "erro no preenchimento do campo"
-    );
+        "status" => "error",
+        "msg"    => "Algum campo não foi preenchido corretamente.",
+      );
       break;
     }
   }
@@ -52,16 +51,16 @@
     VALUES ('$idCategoria','$idMarca','$nome','$descricao', $estoque, $preco)");
 
     $resposta = array(
-        "status" => "sucesso"
+        "status" => "success"
     );
   }
   else
   {
     $resposta = array(
-        "status" => "erro na conexão com o banco"
+      "status" => "error",
+      "msg"    => "Encontramos um problema ao se conectar ao banco de dados."
     );
   }
 
   echo json_encode($resposta);
-   
 ?>

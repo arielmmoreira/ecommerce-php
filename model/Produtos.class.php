@@ -15,6 +15,9 @@
                   <p><b>Preço: </b>R$'.str_replace('.',',',$prod->PRECO).'</p>
                   <p><b>Status: </b>'.($status = $prod->ESTOQUE > 0 ? "Disponível":"Indisponível").'</p>
                   <a id="adicionar" href="controller/carrinho-add.php?id='.$prod->IDPROD.'">Adicionar ao carrinho</a>
+                  <div class="options">
+                    <button data-id="' . $prod->IDPROD . '" data-url="controller/ajax-excluir-produto.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAo0lEQVRIieWTTQqDMBCFP6xb7yg9Qo/SHik3qUgXFlxWqGI3WYQ4Jc5I0NIHswnM+5lH4F9wAXpg9tP7NzVcQGIdFxIWFhcJzBk4D4Yb9vtfYzKpg2aDucWuJHDPLbAlwcJc9gQSTsAbfcEjUMZkUoIJeKi9Q+tFkgJg60Hc+SZg6UHc2S3BIQVUJ7J0oDJVAQPr/8DL76hwBp4ryDug1pL/Dj5MW2BhteGWuAAAAABJRU5ErkJggg=="></button>
+                  </div>
                 </div>
               </div>';
       }

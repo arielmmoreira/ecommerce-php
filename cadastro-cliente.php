@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Cadastrar Cliente</title>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script defer type="text/javascript" src="js/script.js"></script>
     <?php include_once('include/head.php'); ?>
   </head>
   <body>

@@ -81,6 +81,13 @@ section .row .produto-item {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+section .row .produto-item .options {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 section h2.title {
@@ -90,7 +97,7 @@ section h2.title {
 }
 
 section .row h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
     color: #2a2a2a;
 }
@@ -124,16 +131,18 @@ section .row a:hover {
     color: var(--primary-color);
 }
 
-section a {
+.subpage-link {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-color);
     text-decoration: none;
-    margin-top: 20px;
-    height: 40px;
-    line-height: 36px;
-    clear: left;
-    padding: 0 20px;
-    color: #ffffff;
-    background: #5a2b2b;
-    float: left;
+    height: fit-content;
+    transition: .2s;
+}
+
+.subpage-link:hover {
+    opacity: 0.8;
+    color: var(--primary-color);
 }
 
 .cadastro form {
@@ -190,7 +199,7 @@ section a {
     text-align: center;
     padding: 1px 30px 0;
     margin-top: 20px;
-    width: 100%;
+    width: calc(100% + 8px);
     transition: .2s;
 }
 
@@ -200,10 +209,62 @@ section a {
     color: var(--primary-color);
 }
 
+.client-item {
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.client-item .data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 20px;
+}
+
+.client-item .data h3 {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #2a2a2a;
+}
+
+.client-item .data p {
+    margin-bottom: 0;
+}
+
+.options button {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    transition: .2s;
+}
+
+.options button:hover {
+    background-color: #efeeee;
+}
+
+.options button img {
+    width: 17px;
+    height: 17px;
+}
+
 footer {
     padding-top: 60px;
     padding-bottom: 30px;
     text-align: center;
     font-size: 14px;
     color: #707070;
+}
+
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none!important;
 }
