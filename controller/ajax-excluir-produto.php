@@ -9,6 +9,8 @@
 			"msg"    => "Produto não encontrado.",
 		);
 	} else {
+		$mysqli->query("DELETE FROM `itempedido` WHERE idprod = $id");
+		$mysqli->query("DELETE FROM `produtos` WHERE idprod = $id");
 		$resposta = array(
 			"status" => "success",
 			"msg"    => "Produto excluído com sucesso.",
