@@ -11,12 +11,14 @@ $(document).ready(function () {
 	});
 
 	$(".options").on("click", function() {
+    let obj = $(this);
     let id = $(this).find('button').data("id");
     let url = $(this).find('button').data("url");
+    let type = $(this).find('button').data("type");
 
     Swal.fire({
       type: 'warning',
-      title: 'Deletar usuário',
+      title: `Deletar ${type}`,
       text: 'Essa ação será irreversível',
       showCancelButton: true,
       focusConfirm: false,
@@ -42,15 +44,11 @@ $(document).ready(function () {
 					}
 				}).done((data) => {
 					if( data.status === 'success' ) {
-            Swal.fire({
-              type: 'success',
-              title: 'Excluído!',
-              text: data.msg,
-              allowOutsideClick: false,
-              allowEscapeKey: false,
-            }).then((result) => {
-              if (result.value) {
-                window.location.reload(true);
+            obj.parent().parent().fadeOut(500, function(){
+              $(this).remove();
+              if($(".row").children("*:visible").length === 0) {
+                $(".row").remove();
+                $("section .container").append(`<p>Nenhum ${type} encontrado.</p>`);
               }
             });
           } else {

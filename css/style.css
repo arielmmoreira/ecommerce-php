@@ -96,13 +96,13 @@ section h2.title {
     margin-bottom: 25px;
 }
 
-section .row h2 {
+section .row .produto-item h2 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #2a2a2a;
 }
 
-section .row p {
+section .row .produto-item p {
     float: left;
     color: #7e7e7e;
     clear: left;
@@ -110,7 +110,7 @@ section .row p {
     margin-bottom: 5px;
 }
 
-section .row a {
+section .row .produto-item a {
     text-decoration: none;
     margin-top: 20px;
     height: 45px;
