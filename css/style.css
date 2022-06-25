@@ -190,6 +190,10 @@ section .row a:hover {
 }
 
 .cadastro button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     border: 1px solid transparent;
     outline: none;
     height: 60px;
@@ -197,16 +201,28 @@ section .row a:hover {
     color: #fff;
     border-radius: 4px;
     text-align: center;
-    padding: 1px 30px 0;
+    padding: 2px 30px 0;
     margin-top: 20px;
     width: calc(100% + 8px);
     transition: .2s;
+}
+
+.cadastro button[type="submit"] svg path {
+    fill: #fff;
 }
 
 .cadastro button[type="submit"]:hover {
     border-color: var(--primary-color);
     background-color: #fff;
     color: var(--primary-color);
+}
+
+.cadastro button[type="submit"]:hover svg path {
+    fill: var(--primary-color);
+}
+
+.cadastro button[type="submit"]:disabled {
+    opacity: 0.7;
 }
 
 .client-item {
