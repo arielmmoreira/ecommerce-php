@@ -68,7 +68,6 @@
             require_once('controller/conexao.php');
 
             if (@$_SESSION['produtos']) {
-                echo '<ul>';
                 // Cria um loop para encontrar os produtos adicionados
                 for ($i=0; $i < max(array_keys($_SESSION['produtos'])); $i++) {
                     if (@$_SESSION['produtos'][$i+1]) {
@@ -77,20 +76,30 @@
                         if ($prod = mysqli_fetch_object($produto)){
                             $preco = str_replace('.',',',$prod->PRECO);
                             $valortotal = str_replace('.',',', ($quantidade * $prod->PRECO));
-                            echo '<li>
-                                    <h2>'.$prod->NOME.'</h2><p>'.$prod->DESCRICAO.'</p>
-                                    <p><b>Categoria: </b>'.$prod->CATEGORIA.'</p>
-                                    <p><b>Marca: </b>'.$prod->MARCA.'</p>
-                                    <p><b>Estoque: </b>'.$prod->ESTOQUE.'</p>
-                                    <p><b>Preço: </b>R$'.$preco.'</p>
-                                    <p><b>Quantidade: </b>'.$quantidade.'</p>
-                                    <p><b>Valor total: </b>R$'.$valortotal.'</p>
-                                    <a href="controller/carrinho-remover.php?id='.$prod->IDPROD.'">Remover do carrinho</a>
-                                </li>';
+                            echo '<div class="col-12">
+                                    <div class="carrinho-item">
+                                        <div class="data">
+                                            <h3>'.$prod->NOME.'</h3>
+                                            <p class="desc">' . $prod->DESCRICAO . '</p>
+                                            <hr />
+                                            <p><strong>Categoria: </strong>' . $prod->CATEGORIA . '</p>
+                                            <p><strong>Marca: </strong>' . $prod->MARCA . '</p>
+                                            <p><strong>Estoque: </strong>' . $prod->ESTOQUE . '</p>
+                                            <p><strong>Preço: </strong>R$' . $preco . '</p>
+                                            <p><strong>Quantidade: </strong>' . $quantidade . '</p>
+                                            <p><strong>Valor total: </strong>R$' . $valortotal . '</p>
+                                        </div>
+                                        <div class="options">
+                                            <button data-id="' . $prod->IDPROD . '" data-type="carrinho" data-url="controller/ajax-remover-carrinho.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAo0lEQVRIieWTTQqDMBCFP6xb7yg9Qo/SHik3qUgXFlxWqGI3WYQ4Jc5I0NIHswnM+5lH4F9wAXpg9tP7NzVcQGIdFxIWFhcJzBk4D4Yb9vtfYzKpg2aDucWuJHDPLbAlwcJc9gQSTsAbfcEjUMZkUoIJeKi9Q+tFkgJg60Hc+SZg6UHc2S3BIQVUJ7J0oDJVAQPr/8DL76hwBp4ryDug1pL/Dj5MW2BhteGWuAAAAABJRU5ErkJggg=="></button>
+                                        </div>
+                                    </div>
+                                </div>';
                         }
                     }
                 }
-                echo '</ul><a href="controller/produtos-pedido.php">Finalizar pedido</a>';
+                echo '<div class="button-container col-12">
+                        <a class="btn-default" href="controller/produtos-pedido.php">Finalizar pedido</a>
+                    </div>';
             } else {
                 echo '<p>Nenhum produto no carrinho.</p>';
             }

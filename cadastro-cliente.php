@@ -16,23 +16,23 @@
               <div class="row">
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Nome</label>
-                  <input type="text" placeholder="Nome" name="nome" required>
+                  <input type="text" placeholder="Nome" name="nome" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Login</label>
-                  <input type="text" placeholder="Login" name="login" required>
+                  <input type="text" placeholder="Login" name="login" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Senha</label>
-                  <input type="password" placeholder="Senha" name="senha" required>
+                  <input type="password" placeholder="Senha" name="senha" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Data de nascimento</label>
-                  <input type="date" placeholder="Data de nascimento" name="data" required>
+                  <input type="date" placeholder="Data de nascimento" name="data" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Endereço</label>
-                  <input type="text" placeholder="Endereço" name="endereco" required>
+                  <input type="text" placeholder="Endereço" name="endereco" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Sexo</label>
@@ -45,11 +45,11 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>CPF</label>
-                  <input type="text" placeholder="CPF" name="cpf" required>
+                  <input type="text" placeholder="CPF" name="cpf" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>RG</label>
-                  <input type="text" placeholder="RG" name="rg" required>
+                  <input type="text" placeholder="RG" name="rg" autocomplete="off" required>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4">
                   <label>Telefone</label>

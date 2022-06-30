@@ -189,7 +189,7 @@ section .row a:hover {
     transform: translateY(-50%);
 }
 
-.cadastro button[type="submit"] {
+.cadastro button[type="submit"], .btn-default {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,29 +203,28 @@ section .row a:hover {
     text-align: center;
     padding: 2px 30px 0;
     margin-top: 20px;
-    width: calc(100% + 8px);
     transition: .2s;
 }
 
-.cadastro button[type="submit"] svg path {
+.cadastro button[type="submit"] svg path, .btn-default svg path {
     fill: #fff;
 }
 
-.cadastro button[type="submit"]:hover {
+.cadastro button[type="submit"]:hover, .btn-default:hover {
     border-color: var(--primary-color);
     background-color: #fff;
     color: var(--primary-color);
 }
 
-.cadastro button[type="submit"]:hover svg path {
+.cadastro button[type="submit"]:hover svg path, .btn-default:hover svg path {
     fill: var(--primary-color);
 }
 
-.cadastro button[type="submit"]:disabled {
+.cadastro button[type="submit"]:disabled, .btn-default:disabled {
     opacity: 0.7;
 }
 
-.client-item {
+.client-item, .carrinho-item {
     padding: 20px;
     background: #ffffff;
     border: 1px solid #c2c2c2;
@@ -235,21 +234,43 @@ section .row a:hover {
     justify-content: space-between;
 }
 
-.client-item .data {
+.client-item .data, .carrinho-item .data {
     display: flex;
     flex-wrap: wrap;
     gap: 7px 20px;
 }
 
-.client-item .data h3 {
+.client-item .data h3, .carrinho-item .data h3 {
     width: 100%;
     font-size: 20px;
     margin-bottom: 0;
     color: #2a2a2a;
 }
 
-.client-item .data p {
+.client-item .data p, .carrinho-item .data p {
     margin-bottom: 0;
+}
+
+.carrinho-item .desc {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.carrinho-item hr {
+    width: 100%;
+}
+
+#carrinho .button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#carrinho .btn-default {
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 300px;
+    text-decoration: none;
 }
 
 .options button {

@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     Swal.fire({
       type: 'warning',
-      title: `Deletar ${type}`,
+      title: `Deletar ${type === 'carrinho' ? 'produto do carrinho' : type}`,
       text: 'Essa ação será irreversível',
       showCancelButton: true,
       focusConfirm: false,

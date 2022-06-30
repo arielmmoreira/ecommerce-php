@@ -11,7 +11,7 @@
 
 <body>
 	<?php include_once('include/topo.php'); ?>
-	<section id="produtos">
+	<section id="clientes">
 		<div class="container">
 			<div class="d-flex justify-content-between">
 				<h2 class="title">Clientes</h2>
