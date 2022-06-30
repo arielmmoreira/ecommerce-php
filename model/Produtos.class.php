@@ -81,10 +81,11 @@
         }
         echo "<b>Valor total: </b>";
         echo "<p>R$".str_replace('.',',',$total)."</p>";
+        echo "<a class='btn-default' style='width: 300px;' href='/ecommerce-php'>Voltar ao início</a>";
       } else {
         echo "Nenhum pedido foi selecionado.";
         echo "<br/><br/>";
-        echo "<a class='btn-default' style='width: 300px;' href='/'>Voltar ao início</a>";
+        echo "<a class='btn-default' style='width: 300px;' href='/ecommerce-php'>Voltar ao início</a>";
       }
     }
 
