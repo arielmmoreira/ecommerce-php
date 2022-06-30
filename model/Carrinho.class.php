@@ -14,64 +14,6 @@
             if ($id = @$_GET['id']){
                 $produtos = $mysqli->query("SELECT * FROM produtos WHERE IDPROD = $id");
 
-<<<<<<< HEAD
-            if ($quantidade = @$_GET['qnt']){
-            if ($prod = mysqli_fetch_object($produtos)){
-                if (@$_SESSION['produtos']){
-                // Se existir um produto ele checa se este produto já está na sessão
-                    if (@$_SESSION['produtos'][$id]){
-                    // Se ele estiver na sessão, soma a quantidade já existente com a quantidade adicionada para comparar com o estoque
-                    $qnt = $_SESSION['produtos'][$id] + $quantidade;
-                    // Ele checa se a quantidade em estoque é compatível com a quantidade selecionada
-                    if ($qnt > 0 && $qnt <= $prod->ESTOQUE){
-                        // Se a quantidade for compatível ele adiciona ao carrinho
-                        $_SESSION['produtos'][$id] += $quantidade;
-                        $resposta = array(
-                            "status" => "success"
-                        );
-                    } else {
-                        $resposta = array(
-                            "status" => "error",
-                            "msg"    => "a quantidade deve ser compatível ao estoque."
-                          );
-                        // Se a quantidade não for compatível ele retorna erro
-
-                       echo 'Erro, a quantidade deve ser compatível ao estoque </br><a href="../index.php">Voltar</a>';
-                        exit;
-                    }
-                    } else {
-                    // Se não existir um produto ele checa se a quantidade de estoque é compatível
-                    if ($quantidade > 0 && $quantidade <= $prod->ESTOQUE){
-                        $_SESSION['produtos'][$id] = $quantidade;
-                        $resposta = array(
-                            "status" => "success"
-                        );
-                    } else {
-                        $resposta = array(
-                            "status" => "error",
-                            "msg"    => "a quantidade deve ser compatível ao estoque."
-                          );
-                        // Se a quantidade não for compatível ele retorna erro
-                        echo 'Erro, a quantidade deve ser compatível ao estoque </br><a href="../index.php">Voltar</a>';
-                        exit;
-                    }
-                    }
-                } else {
-                // Se não existir nenhum produto ele cria um novo array na sessão e adiciona a quantidade
-                if ($quantidade > 0 && $quantidade <= $prod->ESTOQUE){
-                    $_SESSION['produtos'] = array();
-                    $_SESSION['produtos'][$id] = $quantidade;
-                    $resposta = array(
-                        "status" => "success"
-                    );
-                } else {
-                    $resposta = array(
-                        "status" => "error",
-                        "msg"    => "a quantidade deve ser compatível ao estoque."
-                      );
-                    // Se a quantidade não for compatível ele retorna erro
-                    echo 'Erro, a quantidade deve ser compatível ao estoque </br><a href="../index.php">Voltar</a>';
-=======
                 if ($quantidade = @$_GET['qnt']) {
                     if ($prod = mysqli_fetch_object($produtos)) {
                         if (@$_SESSION['produtos']){
@@ -112,39 +54,15 @@
                     }
                 } else {
                     echo 'Erro, nenhuma quantidade foi definida </br><a href="../index.php">Voltar</a>';
->>>>>>> 54a63f6157e4c1e39312fbcc232863a443dbc672
                     exit;
                 }
             } else {
-<<<<<<< HEAD
-                $resposta = array(
-                    "status" => "error",
-                    "msg"    => "a quantidade deve ser compatível ao estoque."
-                  );
-            echo 'Erro, nenhuma quantidade foi definida </br><a href="../index.php">Voltar</a>';
-            exit;
-            }
-        } else {
-            $resposta = array(
-                "status" => "error",
-                "msg"    => "a quantidade deve ser compatível ao estoque."
-              );
-            echo 'Erro, nenhum produto foi selecionado </br><a href="../index.php">Voltar</a>';
-            exit;
-        }
-        // Redireciona para a inicial
-        //echo json_encode($resposta);
-        
-        header('location: ../index.php');
-    }
-=======
                 echo 'Erro, nenhum produto foi selecionado </br><a href="../index.php">Voltar</a>';
                 exit;
             }
             // Redireciona para a inicial
             header('location: ../index.php');
         }
->>>>>>> 54a63f6157e4c1e39312fbcc232863a443dbc672
 
         function buscar() {
             require_once('controller/conexao.php');
@@ -187,29 +105,6 @@
             }
         }
 
-<<<<<<< HEAD
-    function remover() {
-      // Checa para ver se existe algum produto selecionado
-      if ($id = @$_GET['id']) {
-        // Se estiver selecionado, ele remove o produto da sessão
-        unset($_SESSION['produtos'][$id]);
-        $resposta = array(
-            "status" => "success"
-        );
-
-      } else {
-        $resposta = array(
-            "status" => "error",
-            "msg"    => "Nenhum produto selecionado"
-          );
-
-        
-      }
-
-      echo json_encode($resposta);
-
-      header('location: ../carrinho.php');
-=======
         function remover() {
             // Checa para ver se existe algum produto selecionado
             if ($id = @$_GET['id']) {
@@ -221,6 +116,5 @@
 
             header('location: ../carrinho.php');
         }
->>>>>>> 54a63f6157e4c1e39312fbcc232863a443dbc672
     }
 ?>
