@@ -11,7 +11,7 @@
 
 <body>
 	<?php include_once('include/topo.php'); ?>
-	<section id="produtos">
+	<section id="clientes">
 		<div class="container">
 			<div class="d-flex justify-content-between">
 				<h2 class="title">Clientes</h2>
@@ -40,7 +40,7 @@
 							'			<p><strong>Celular: </strong>' . $cliente[10] . '</p>' .
 							'		</div>' .
 							'		<div class="options">' .
-							'			<button data-id="' . $cliente[0] . '" data-url="controller/ajax-excluir-cliente.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAo0lEQVRIieWTTQqDMBCFP6xb7yg9Qo/SHik3qUgXFlxWqGI3WYQ4Jc5I0NIHswnM+5lH4F9wAXpg9tP7NzVcQGIdFxIWFhcJzBk4D4Yb9vtfYzKpg2aDucWuJHDPLbAlwcJc9gQSTsAbfcEjUMZkUoIJeKi9Q+tFkgJg60Hc+SZg6UHc2S3BIQVUJ7J0oDJVAQPr/8DL76hwBp4ryDug1pL/Dj5MW2BhteGWuAAAAABJRU5ErkJggg=="></button>' .
+							'			<button data-id="' . $cliente[0] . '" data-type="cliente" data-url="controller/ajax-excluir-cliente.php"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAo0lEQVRIieWTTQqDMBCFP6xb7yg9Qo/SHik3qUgXFlxWqGI3WYQ4Jc5I0NIHswnM+5lH4F9wAXpg9tP7NzVcQGIdFxIWFhcJzBk4D4Yb9vtfYzKpg2aDucWuJHDPLbAlwcJc9gQSTsAbfcEjUMZkUoIJeKi9Q+tFkgJg60Hc+SZg6UHc2S3BIQVUJ7J0oDJVAQPr/8DL76hwBp4ryDug1pL/Dj5MW2BhteGWuAAAAABJRU5ErkJggg=="></button>' .
 							'		</div>' .
 							'	</div>' .
 							'</div>';

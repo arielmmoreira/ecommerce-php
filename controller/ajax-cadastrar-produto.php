@@ -51,7 +51,8 @@
     VALUES ('$idCategoria','$idMarca','$nome','$descricao', $estoque, $preco)");
 
     $resposta = array(
-        "status" => "success"
+        "status" => "success",
+        "msg" => "Novo produto cadastrado com sucesso.",
     );
   }
   else

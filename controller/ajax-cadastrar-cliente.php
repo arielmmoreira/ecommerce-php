@@ -45,7 +45,7 @@
 
     $resposta = array(
         "status" => "success",
-        "msg" => "",
+        "msg" => "Novo cliente cadastrado com sucesso.",
     );
   }
   else
