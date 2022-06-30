@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Resumo de Pedido</title>
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <script defer type="text/javascript" src="js/script.js"></script>
+    <title>Resumo do pedido</title>
     <?php include_once('include/head.php'); ?>
   </head>
   <body>
     <?php include_once('include/topo.php'); ?>
     <section id="produtos">
-        <div class="center">
-          <div>
-            <?php require_once('controller/produtos-resumo.php'); ?>
-          </div>
+      <div class="center">
+        <div>
+          <?php require_once('controller/produtos-resumo.php'); ?>
         </div>
+      </div>
     </section>
     <?php include_once('include/rodape.php'); ?>
   </body>

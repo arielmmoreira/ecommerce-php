@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Cadastrar Cliente</title>
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <script defer type="text/javascript" src="js/script.js"></script>
+    <title>Cadastrar novo cliente</title>
     <?php include_once('include/head.php'); ?>
   </head>
   <body>
@@ -62,7 +59,7 @@
               </div>
               <div class="row">
                 <div class="col-12 col-md-4">
-                  <button type="submit" data-loading-text="Cadastrando...">Cadastrar</button>
+                  <button class="btn-full" type="submit" data-loading-text="Cadastrando...">Cadastrar</button>
                 </div>
               </div>
             </form>

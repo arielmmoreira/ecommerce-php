@@ -273,6 +273,10 @@ section .row a:hover {
     text-decoration: none;
 }
 
+.btn-full {
+    width: 100%;
+}
+
 .options button {
     border: 0;
     outline: none;

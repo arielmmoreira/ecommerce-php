@@ -44,13 +44,20 @@ $(document).ready(function () {
 					}
 				}).done((data) => {
 					if( data.status === 'success' ) {
-            obj.parent().parent().fadeOut(500, function(){
+            obj.parent().parent().fadeOut(450, function() {
               $(this).remove();
-              if($(".row").children("*:visible").length === 0) {
+              if($(".row").children("*:not(.button-container):visible").length === 0) {
                 $(".row").remove();
                 $("section .container").append(`<p>Nenhum ${type} encontrado.</p>`);
               }
             });
+            if(type === "produto" || type === "carrinho") {
+              if(data.carrinhoQtd === 0) {
+                $("header nav .counter").fadeOut(300);
+              } else {
+                $("header nav .counter").text(data.carrinhoQtd);
+              }
+            }
           } else {
             Swal.fire('Erro', data.msg, 'error');
           }
