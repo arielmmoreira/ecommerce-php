@@ -67,23 +67,24 @@
         $pedido = $mysqli->query("SELECT i.*,p.*,i.QTDE * p.PRECO AS TOTAL, c.DESCRICAO as CATEGORIA, m.DESCRICAO as MARCA FROM itempedido i INNER JOIN produtos p ON i.IDPROD = p.IDPROD INNER JOIN categoria c ON p.IDCATEGORIA = c.IDCATEGORIA INNER JOIN marca m ON m.IDMARCA = p.IDMARCA WHERE i.IDPED = $id");
         $total = 0;
 
-        echo "<b>Cod. Pedido: </b><p>$id</p>";
-        echo "<br>";
-        echo "<h2>Produtos</h2>";
+        echo "<b>Pedido número: $id</b>";
+        echo "<br/><br/>";
         while ($ped = mysqli_fetch_object($pedido)){
-          echo "<p>Nome: $ped->NOME</p>";
-          echo "<p>Descrição: $ped->DESCRICAO</p>";
-          echo "<p>Categoria: $ped->CATEGORIA</p>";
-          echo "<p>Marca: $ped->MARCA</p>";
-          echo "<p>Preço: R$".str_replace('.',',',$ped->PRECO)."</p>";
-          echo "<p>Quantidade: $ped->QTDE</p>";
+          echo "<p><strong>Nome:</strong> $ped->NOME</p>";
+          echo "<p><strong>Descrição:</strong> $ped->DESCRICAO</p>";
+          echo "<p><strong>Categoria:</strong> $ped->CATEGORIA</p>";
+          echo "<p><strong>Marca:</strong> $ped->MARCA</p>";
+          echo "<p><strong>Preço:</strong> R$".str_replace('.',',',$ped->PRECO)."</p>";
+          echo "<p><strong>Quantidade:</strong> $ped->QTDE</p>";
           echo "<br>";
           $total += $ped->TOTAL;
         }
         echo "<b>Valor total: </b>";
         echo "<p>R$".str_replace('.',',',$total)."</p>";
       } else {
-        echo "Erro! Nenhum pedido foi selecionado";
+        echo "Nenhum pedido foi selecionado.";
+        echo "<br/><br/>";
+        echo "<a class='btn-default' style='width: 300px;' href='/'>Voltar ao início</a>";
       }
     }
 

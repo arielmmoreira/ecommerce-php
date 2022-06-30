@@ -6,9 +6,9 @@
   </head>
   <body>
     <?php include_once('include/topo.php'); ?>
-    <section id="produtos">
-      <div class="center">
-        <div>
+    <section id="pedido">
+        <div class="container">
+          <h2 class="title">Resumo do pedido</h2>
           <?php require_once('controller/produtos-resumo.php'); ?>
         </div>
       </div>

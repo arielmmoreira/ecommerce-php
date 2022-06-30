@@ -204,6 +204,7 @@ section .row a:hover {
     padding: 2px 30px 0;
     margin-top: 20px;
     transition: .2s;
+    text-decoration: none;
 }
 
 .cadastro button[type="submit"] svg path, .btn-default svg path {
